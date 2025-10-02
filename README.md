@@ -6,19 +6,19 @@
 
 `SEMESTRE: 8º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto busca implementar um sistema de gestão estratégica para a JPMC English, uma microempresa de aulas particulares de inglês. O sistema deve ser capaz de centralizar dados de alunos, aulas e pagamentos, fornecendo relatórios sobre frequência, inadimplência, ticket médio, tempo de permanência e perfil dos estudantes. Além de melhorar a gestão interna, a solução pretende apoiar decisões estratégicas relacionadas ao crescimento sustentável, à definição do público-alvo e ao posicionamento de mercado. O objetivo é aumentar a organização, eficiência e competitividade da JPMC English, permitindo que a empresa se diferencie por sua flexibilidade, personalização e custo-benefício.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Bianca Oliveira da Silva
+* Diego da Silva Gomes Barbosa
+* Enzo Silva Soares
+* Henrique Israel Oliveira
+* João Pedro Madeira Cristino
+* Lucas Vinicius Oliveira Mendes
 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Simone Fernandes Queiroz
 
