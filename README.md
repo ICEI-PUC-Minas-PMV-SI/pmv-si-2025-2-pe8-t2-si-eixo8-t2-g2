@@ -22,3 +22,13 @@ O projeto busca implementar um sistema de gestão estratégica para a JPMC Engli
 
 * Simone Fernandes Queiroz
 
+
+## Planejamento
+
+| Etapa  | Atividades                                |
+|---------|--------------------------------------------|
+| ETAPA 1 | Apresentação da empresa do projeto         |
+| ETAPA 2 | Plano de inteligência competitiva          |
+| ETAPA 3 | Desenvolvimento de soluções de SI          |
+| ETAPA 4 | Apresentação do projeto                    |
+| ETAPA 5 | Planejamento Estratégico de TI             |
