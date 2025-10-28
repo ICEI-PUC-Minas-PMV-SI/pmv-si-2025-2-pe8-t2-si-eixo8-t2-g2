@@ -27,8 +27,8 @@ O projeto busca implementar um sistema de gestão estratégica para a JPMC Engli
 
 | Etapa  | Atividades                                |
 |---------|--------------------------------------------|
-| ETAPA 1 | [Apresentação da empresa do projeto](docs/apresentação.md).<br>        |
-| ETAPA 2 | [Plano de inteligência competitiva](docs/plano,md) .<br>         |
-| ETAPA 3 | [Desenvolvimento de soluções de SI](docs/desenvolvimento.md).<br>          |
-| ETAPA 4 | [Apresentação do projeto](docs/apresentação-projeto.md).<br>                    |
-| ETAPA 5 | [Planejamento Estratégico de TI](docs/planejamento.md).<br>            |
+| ETAPA 1 | [Apresentação da empresa do projeto]      |
+| ETAPA 2 | [Plano de inteligência competitiva]        |
+| ETAPA 3 | [Desenvolvimento de soluções de SI]          |
+| ETAPA 4 | [Apresentação do projeto]        |
+| ETAPA 5 | [Planejamento Estratégico de TI           |
