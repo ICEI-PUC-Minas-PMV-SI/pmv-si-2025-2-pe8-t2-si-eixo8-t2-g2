@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: jpmc_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: jpmc_english
+      MYSQL_USER: jpmc_user
+      MYSQL_PASSWORD: jpmc_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - jpmc_network
+
+  app:
+    build: .
+    container_name: jpmc_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=mysql+pymysql://jpmc_user:jpmc_password@mysql:3306/jpmc_english
+    depends_on:
+      - mysql
+    networks:
+      - jpmc_network
+
+volumes:
+  mysql_data:
+
+networks:
+  jpmc_network:
+    driver: bridge
