@@ -28,7 +28,7 @@ O projeto busca implementar um sistema de gestão estratégica para a JPMC Engli
 | Etapa  | Atividades                                |
 |---------|--------------------------------------------|
 | ETAPA 1 | [Apresentação da empresa do projeto]      |
-| ETAPA 2 | [Plano de inteligência competitiva]        |
+| ETAPA 2 | [Plano de inteligência competitiva](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Etapas/Etapa_2_JPMC_English.md)        |
 | ETAPA 3 | [Desenvolvimento de soluções de SI]          |
 | ETAPA 4 | [Apresentação do projeto]        |
 | ETAPA 5 | [Planejamento Estratégico de TI           |
