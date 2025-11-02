@@ -65,17 +65,6 @@ De forma geral, a JPMC English se encontra em um estágio inicial de maturidade 
 
 ### Mapeamento de processos (BPMN)
 
-O processo atual pode ser mapeado da seguinte forma:
+Início → Prospectar alunos → Aluno informa dados, objetivos e disponibilidade de horários → Negociação de disponibilidade/horários  → Agendamento de aula → Preparação de material → Execução da aula online → Registro de presença/falta → Cálculo manual de pagamentos (mensal) → Recebimento do aluno → Controle financeiro → Fim.
 
-1.  **Início**
-2.  Prospectar alunos
-3.  Aluno informa dados, objetivos e disponibilidade de horários
-4.  Negociação de disponibilidade/horários
-5.  Agendamento de aula
-6.  Preparação de material
-7.  Execução da aula online
-8.  Registro de presença/falta
-9.  Cálculo manual de pagamentos (mensal)
-10. Recebimento do aluno
-11. Controle financeiro
-12. **Fim**
+![mapa](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/Planilha/1.3%20Mapeamento%20de%20processos%20(BPMN).png)
