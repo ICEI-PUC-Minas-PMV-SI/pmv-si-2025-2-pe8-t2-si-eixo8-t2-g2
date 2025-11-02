@@ -1,6 +1,6 @@
 # **Etapa 2 – Plano de Inteligência Competitiva (IC)**
 
-## **2.1 Identificação das Necessidades de IC**
+## **1 - Identificação das Necessidades de IC**
 
 O objetivo desta etapa é compreender as decisões estratégicas da **JPMC English** e identificar lacunas de informação que possam ser preenchidas.  
 Isso permitirá que a empresa tome decisões embasadas e aproveite melhor as oportunidades.
@@ -52,7 +52,7 @@ Para orientar a decisão sobre a estruturação de um sistema de gestão estrat�
 
 ---
 
-## **2.2 Identificação das Lacunas de Informação**
+## **1.2 - Identificação das Lacunas de Informação**
 
 Essa etapa tem como objetivo identificar as lacunas de informação da **JPMC English**, de modo a orientar a prospecção de alunos e a gestão estratégica do negócio.  
 As informações levantadas visam **mitigar riscos** e **otimizar oportunidades de crescimento**.
@@ -72,7 +72,7 @@ As informações levantadas visam **mitigar riscos** e **otimizar oportunidades 
 
 ---
 
-## **2.3 Especificação de Requisitos Informacionais**
+## **1.3 - Especificação de Requisitos Informacionais**
 
   Com base nas questões estratégicas levantadas na etapa anterior, foi possível traduzir as necessidades de informação da JPMC English em requisitos que deverão orientar o desenvolvimento do sistema de gestão. O objetivo é garantir que as decisões da empresa sejam tomadas a partir de dados concretos e direcionados, organizados de forma clara em relatórios e planilhas.
   
@@ -109,7 +109,7 @@ As informações levantadas visam **mitigar riscos** e **otimizar oportunidades 
 
 ---
 
-## **2.4 Compliance de TI e Segurança da Informação**
+## **1.4 - Compliance de TI e Segurança da Informação**
 
 A **JPMC English** deve seguir normas e regulações aplicáveis em sua área de atuação e os sistemas de informação que forem adotados pela empresa devem considerar a conformidade com regulações em suas regras de negócios e no tratamento de dados
 
