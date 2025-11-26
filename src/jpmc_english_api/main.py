@@ -7,7 +7,8 @@ from enum import Enum
 from models import (
     Customer, CustomerCreate, CustomerUpdate,
     Schedule, ScheduleCreate, ScheduleUpdate,
-    Payment, PaymentCreate, PaymentUpdate
+    Payment, PaymentCreate, PaymentUpdate,
+    PaymentReport
 )
 from repositories import customer_repo, payment_repo, schedule_repo
 import os
@@ -176,7 +177,13 @@ def delete_schedule(id: int):
         raise HTTPException(status_code=404, detail="Schedule not found")
     return None
 
-
+@app.get("/relatorios/pagamentos", response_model=List[PaymentReport], tags=["Relatórios"])
+def payment_report(
+    startDate: str | None = Query(None, description="YYYY-MM-DD"),
+    endDate: str | None = Query(None, description="YYYY-MM-DD"),
+    status: str | None = Query(None, description="scheduled/cancelled/etc.")
+):
+    return payment_repo.get_payment_report(startDate, endDate, status)
 # ==================== ENDPOINT RAIZ ====================
 
 @app.get("/", tags=["Root"])
