@@ -1,6 +1,6 @@
 import mysql.connector as mysql
 from typing import List, Optional, Dict, Any
-from models import Customer, Payment, Schedule
+from app.models.models import Customer, Payment, Schedule
 import os
 
 
@@ -70,6 +70,7 @@ class CustomerRepository:
             FROM pagamentos P
             INNER JOIN agendamentos A ON P.agendamento = A.id
             WHERE P.paid = FALSE
+            AND A.datetime < NOW()
         ),
         agendamentosCte AS (
             SELECT S.id, S.aluno

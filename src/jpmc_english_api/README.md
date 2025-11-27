@@ -43,11 +43,11 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-2. A API estará disponível em: `http://127.0.0.1:8000`
+2. A API estará disponível em: `http://127.0.0.1:8001`
 
-3. Acesse a documentação Swagger em: `http://127.0.0.1:8000/docs`
+3. Acesse a documentação Swagger em: `http://127.0.0.1:8001/docs`
 
-4. Acesse a documentação ReDoc em: `http://127.0.0.1:8000/redoc`
+4. Acesse a documentação ReDoc em: `http://127.0.0.1:8001/redoc`
 
 ## Estrutura do Projeto
 

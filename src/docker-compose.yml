@@ -18,6 +18,8 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 20s
       retries: 10
+    networks:
+      - default
 
   api:
     build:
@@ -25,7 +27,7 @@ services:
       dockerfile: Dockerfile
     container_name: jpmc_api
     ports:
-      - "8000:8000"
+      - "8001:8001"
     environment:
       DB_HOST: mysql
       DB_USER: user
@@ -37,18 +39,24 @@ services:
         condition: service_healthy
     volumes:
       - ./jpmc_english_api:/app
+    networks:
+      - default
 
   spa:
     build:
       context: ./jpmc_english_spa
       dockerfile: Dockerfile
     container_name: jpmc_spa
+    depends_on:
+      - api
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://api:8000
-    volumes:
-      - ./jpmc_english_spa:/app
+      NEXT_PUBLIC_API_URL: http://api:8001
 
 volumes:
   mysql_data:
+
+networks:
+  default:
+    driver: bridge
