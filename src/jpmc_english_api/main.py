@@ -4,13 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 from datetime import date, time
 from enum import Enum
-from models import (
+from app.models.models import (
     Customer, CustomerCreate, CustomerUpdate,
     Schedule, ScheduleCreate, ScheduleUpdate,
     Payment, PaymentCreate, PaymentUpdate,
     PaymentReport
 )
-from repositories import customer_repo, payment_repo, schedule_repo
+from app.repositories.repositories import customer_repo, payment_repo, schedule_repo
 import os
 
 app = FastAPI(

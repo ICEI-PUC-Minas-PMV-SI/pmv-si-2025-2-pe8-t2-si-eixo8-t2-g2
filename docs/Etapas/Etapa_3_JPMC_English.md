@@ -166,7 +166,7 @@ A navegação é intuitiva e persistente, localizada no topo da tela, permitindo
 
 #### ADICIONAR ALUNOS
 
-**![Imagem: Modal de Adicionar Novo Aluno](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/Front/AdicionarAlunospng.png)**
+**![Imagem: Modal de Adicionar Novo Aluno](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/JPMC-Prints2/Aluno-Create.png)**
 
 Esta imagem mostra a tela de Gerenciamento de Alunos do sistema JPMC English, com o Modal (janela *pop-up*) de “Adicionar novo aluno” aberto. O modal é um formulário de cadastro que solicita as seguintes informações obrigatórias para registrar um novo aluno:
 
@@ -179,7 +179,7 @@ A tela de fundo exibe a lista de alunos já cadastrados em uma tabela, com opç�
 
 #### Agendamentos:
 
-**![Imagem: Painel de Agendamentos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/Front/Agendamentos.png)**
+**![Imagem: Painel de Agendamentos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/JPMC-Prints2/Agendamentos.png)**
 
 É um painel de agendamentos que mostra:
 
@@ -190,7 +190,7 @@ A tela de fundo exibe a lista de alunos já cadastrados em uma tabela, com opç�
 
 #### ALUNOS
 
-**![Imagem: Lista de Alunos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/Front/Alunospng.png)**
+**![Imagem: Lista de Alunos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/JPMC-Prints2/Alunos.png)**
 
 Exibe uma lista de alunos com as colunas:
 
@@ -201,7 +201,7 @@ Exibe uma lista de alunos com as colunas:
 
 #### Pagamentos
 
-**![Imagem: Painel de Pagamentos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/Front/Pagamentos.png)**
+**![Imagem: Painel de Pagamentos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/JPMC-Prints2/Pagamentos.png)**
 
 Essa tela mostra o painel de pagamentos do sistema JPMC English.
 

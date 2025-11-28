@@ -1,7 +1,5 @@
 import { apiClient } from "./client";
 
-const baseUrl = "http://localhost:8000/api";
-
 export type Payment = {
   id: number;
   aluno: string;
