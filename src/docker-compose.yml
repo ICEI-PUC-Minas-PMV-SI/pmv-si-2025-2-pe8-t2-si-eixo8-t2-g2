@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: jpmc_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: jpmc_english
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./jpmc_english_api/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+    networks:
+      - default
+
+  api:
+    build:
+      context: ./jpmc_english_api
+      dockerfile: Dockerfile
+    container_name: jpmc_api
+    ports:
+      - "8001:8001"
+    environment:
+      DB_HOST: mysql
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: jpmc_english
+      DB_PORT: 3306
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./jpmc_english_api:/app
+    networks:
+      - default
+
+  spa:
+    build:
+      context: ./jpmc_english_spa
+      dockerfile: Dockerfile
+    container_name: jpmc_spa
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:8001
+
+volumes:
+  mysql_data:
+
+networks:
+  default:
+    driver: bridge
