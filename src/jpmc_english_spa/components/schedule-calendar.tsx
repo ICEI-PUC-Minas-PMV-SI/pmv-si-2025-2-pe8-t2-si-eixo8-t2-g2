@@ -49,7 +49,6 @@ export function ScheduleCalendar() {
       const combinedSlots: TimeSlot[] = [];
 
       if (schedules && Array.isArray(schedules)) {
-        console.log("found schedules:", schedules);
         schedules.forEach((schedule: any) => {
           combinedSlots.push({
             agendamentoId: schedule.id,
@@ -68,7 +67,6 @@ export function ScheduleCalendar() {
           });
         });
       }
-      console.log("combinedSlots:", combinedSlots);
       setSlots(combinedSlots);
     } catch (error) {
       console.error("[v0] Error loading schedules:", error);
@@ -111,8 +109,8 @@ export function ScheduleCalendar() {
     if (slotData?.isLocked) {
       return;
     }
-    const scheduleDate = new Date();
-    scheduleDate.setDate(getWeekStartDate(currentWeek).getDate() + day);
+    const scheduleDate = getWeekStartDate(currentWeek);
+    scheduleDate.setDate(scheduleDate.getDate() + day);
     scheduleDate.setHours(hour, 0, 0, 0);
 
     setSelectedDatetime(scheduleDate);
