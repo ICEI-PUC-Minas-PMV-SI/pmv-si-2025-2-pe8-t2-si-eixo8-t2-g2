@@ -48,3 +48,34 @@ export async function fetchAPIWithFile<T>(
 
   return response.json()
 }
+export type PaymentReport = {
+  alunoId: number
+  alunoNome: string
+  totalPagamentos: number
+  pagos: number
+  pendentes: number
+  valorPago: number
+  valorPendente: number
+}
+
+export type ReportFilters = {
+  startDate?: string
+  endDate?: string
+  status?: string
+}
+
+export async function getPaymentReport(filters: ReportFilters = {}) {
+  const params = new URLSearchParams()
+
+  if (filters.startDate && filters.endDate) {
+    params.append("startDate", filters.startDate)
+    params.append("endDate", filters.endDate)
+  }
+
+  if (filters.status) {
+    params.append("status", filters.status)
+  }
+
+  const query = params.toString() ? `?${params.toString()}` : ""
+  return fetchAPI<PaymentReport[]>(`/relatorios/pagamentos${query}`)
+}

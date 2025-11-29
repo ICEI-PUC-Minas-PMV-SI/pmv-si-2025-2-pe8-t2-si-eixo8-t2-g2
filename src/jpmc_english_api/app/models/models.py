@@ -74,3 +74,11 @@ class Schedule(ScheduleBase):
     class Config:
         from_attributes = True
 
+class PaymentReport(BaseModel):
+    alunoId: int = Field(description="Customer ID")
+    alunoNome: str = Field(description="Customer name")
+    totalPagamentos: int = Field(description="Total payments")
+    pagos: int = Field(description="Paid payments")
+    pendentes: int = Field(description="Pending payments")
+    valorPago: float = Field(description="Paid amount")
+    valorPendente: float = Field(description="Pending amount")

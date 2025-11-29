@@ -205,6 +205,39 @@ class PaymentRepository:
         conn.commit()
         return deleted
 
+    def get_payment_report(self, start_date=None, end_date=None, status=None):
+        conn = self.db.get_connection()
+        cursor = conn.cursor(dictionary=True)
+        query = """
+        SELECT
+            a.id AS alunoId,
+            a.name AS alunoNome,
+            COUNT(p.id) AS totalPagamentos,
+            SUM(p.paid = TRUE) AS pagos,
+            SUM(p.paid = FALSE) AS pendentes,
+            SUM(CASE WHEN p.paid = TRUE THEN p.value ELSE 0 END) AS valorPago,
+            SUM(CASE WHEN p.paid = FALSE THEN p.value ELSE 0 END) AS valorPendente
+        FROM alunos a
+        LEFT JOIN agendamentos s ON s.aluno = a.id
+        LEFT JOIN pagamentos p ON p.agendamento = s.id
+        WHERE 1=1
+        """
+        params = []
+        if start_date and end_date:
+            query += " AND s.datetime BETWEEN %s AND %s"
+            params.extend([start_date, end_date])
+        if status:
+            query += " AND s.status = %s"
+            params.append(status)
+        query += " GROUP BY a.id, a.name ORDER BY a.name"
+
+        cursor.execute(query, params)
+        rows = cursor.fetchall()
+        cursor.close()
+        conn.commit()
+        return rows
+
+
 
 class ScheduleRepository:
     def __init__(self, db_connection: DatabaseConnection):
