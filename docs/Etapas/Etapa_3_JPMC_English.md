@@ -154,11 +154,7 @@ O sistema de gerenciamento JPMC English apresenta uma interface de usuário (UI)
 
 ### 5.1 - Design e Estética
 
-O design adota uma paleta de cores predominantemente neutra, utilizando o branco como cor de fundo principal e tons de cinza para elementos de contraste e separação. O uso de uma única cor de destaque (preto ou um cinza muito escuro) para botões primários e ícones de navegação confere um visual profissional e focado.
-
-*   **Tipografia:** A fonte utilizada é sans-serif, de alta legibilidade, contribuindo para a clareza da informação, especialmente em tabelas e formulários.
-*   **Espaçamento e Layout:** O layout é bem espaçado, com uso eficiente de *whitespace* (espaço em branco), o que reduz a carga cognitiva e facilita a varredura visual do conteúdo. O design é responsivo, com a navegação principal (*Navbar*) no topo e o conteúdo centralizado.
-*   **Componentes:** O sistema faz uso de componentes de UI padronizados, como botões de ação (*+ Adicionar Aluno*, *+ Registrar pagamento*), modais (janelas *pop-up* para *Adicionar novo aluno* e *Registrar novo pagamento*), e tabelas de dados paginadas.
+O design adota uma paleta de cores predominantemente neutra, com branco para o conteúdo e cinza muito claro para o fundo da página, promovendo um layout limpo e com uso eficiente de whitespace. A cor de destaque primária é um azul vibrante, utilizada para botões de ação e para indicar a aba de navegação ativa, direcionando o foco do usuário. Cores adicionais (verde e vermelho/rosa) são empregadas em badges de status na tabela para sinalizar contagens neutras/positivas e alertas, respectivamente. A tipografia sans-serif garante alta legibilidade. O layout é centralizado em um cartão (card) e utiliza componentes padronizados como a Navbar, botões de ação e tabelas de dados paginadas com badges de status.
 
 ### 5.2 - Componentes de Navegação e Estrutura
 
@@ -255,7 +251,42 @@ A interface web foi projetada para oferecer controle visual e prático das opera
 *   Para produção, integrar com **MySQL ou PostgreSQL**.
 *   A documentação Swagger permite testar os endpoints no navegador.
 
-## 7 - Próximos Passos
+### 7. Relatórios
+
+A tela de Relatórios Financeiros do JPMC English é um exemplo robusto de como a tecnologia pode ser aplicada para otimizar a gestão de receitas e mitigar a inadimplência em instituições de ensino. Ao consolidar filtros temporais, KPIs globais e um detalhamento financeiro por aluno, a ferramenta transforma dados brutos em inteligência gerencial. Sua importância reside na capacidade de fornecer uma visão imediata e acionável da saúde financeira, permitindo que a administração tome decisões proativas, seja para celebrar o sucesso da receita realizada ou para implementar planos de ação eficazes contra as contas a receber. A clareza e a organização das informações apresentadas são essenciais para a manutenção de um fluxo de caixa saudável e para o planejamento estratégico da instituição.
+
+**![Imagem: Modal de Registro de Pagamento](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe8-t2-si-eixo8-t2-g2/blob/main/docs/Img/JPMC-Prints2/Relatorios.png)**
+
+## Indicadores-Chave de Desempenho (KPIs) Globais
+
+A tela apresenta dois Indicadores-Chave de Desempenho (KPIs) de alto nível. A soma desses dois indicadores (R$ 2.000,00) corresponde ao valor total dos serviços faturados ou devidos no período. A proporção entre o Valor Pago e o Valor Pendente (40% pago, 60% pendente) é um KPI crítico que sinaliza a necessidade de ações de cobrança ou a revisão das políticas de pagamento.
+
+| Indicador | Valor Observado (R$) | Significado Gerencial |
+|---|---|---|
+| **Valor Pago** | R$ 800,00 | Representa a **Receita Realizada** no período, ou seja, o montante que efetivamente entrou no caixa da instituição. |
+| **Valor Pendente** | R$ 1.200,00 | Representa o **Contas a Receber** (inadimplência ou valores a vencer), indicando o potencial de receita futura e o risco de crédito. |
+
+## Detalhamento Financeiro por Aluno
+
+O detalhamento tabular é o componente mais valioso para a gestão da inadimplência, pois transforma dados agregados em informações acionáveis. A tabela a seguir demonstra a situação individual dos alunos:
+
+| Aluno | Pagamentos Realizados (Qtd) | Pagamentos Pendentes (Qtd) | Valor Pago (R$) | Valor Pendente (R$) |
+|---|---|---|---|---|
+| Bianca O | 2 | 2 | 400,00 | 500,00 |
+| Enzo Silva Soares | 1 | 1 | 200,00 | 500,00 |
+| João Pedro | 1 | 1 | 200,00 | 200,00 |
+| **Total** | **4** | **4** | **800,00** | **1.200,00** |
+
+Este nível de granularidade permite:
+
+1. **Identificação de Risco**: O gestor pode identificar imediatamente quais alunos (e.g., Bianca O e Enzo Silva Soares, com R$ 500,00 pendentes cada) representam a maior parte do risco de crédito.
+
+2. **Ações de Cobrança Personalizadas**: A informação detalhada suporta a criação de estratégias de cobrança direcionadas, priorizando os maiores valores ou os alunos com maior histórico de pendências.
+
+3. **Análise de Volume**: A contagem de pagamentos realizados e pendentes (colunas "Pagos" e "Pendentes") oferece um contexto sobre o volume de transações, não apenas o valor monetário.
+
+
+## 8 - Próximos Passos
 
 1.  Integrar com banco de dados MySQL
 2.  Implementar autenticação e autorização
